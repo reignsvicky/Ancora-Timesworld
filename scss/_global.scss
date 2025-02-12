@@ -16,7 +16,9 @@ ul {
 p {
     font-size: 1.1rem;
 }
-
+main {
+    position: relative;
+}
 .font-felix {
     font-family: variables.$font-primary;
 }
@@ -35,6 +37,27 @@ p {
     font-size: 0.8rem;
     padding: 1rem 3.3rem;
     letter-spacing: .15rem;
+}
+
+.vertical-dark-button {
+    border-radius: 3px;
+    color: white;
+    font-family: "Lato", sans-serif;
+    background: #243230ba;
+    font-weight: 400;
+    font-size: 0.9rem;
+    padding: 1.5rem 2.5rem;
+    letter-spacing: 0.15rem;
+    -ms-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    position: fixed;
+    z-index: 5;
+    right: -95px;
+    top: 63%;
+    border: 1px solid white;
+    border-radius: 5px;
 }
 
 .light-background {
