@@ -1,0 +1,22 @@
+// Override Bootstrap Variables
+
+//background
+$dark: #243230;
+$light: #fefef1;
+
+$white: #f8f9fa;
+$gray: #636363;
+
+$input-background: #F2F1E3;
+$nav-active-green: #0EE3C4;
+$black: #243230;
+
+$font-primary: "Felix Titling", serif;
+$font-secondary: "Lato", sans-serif;
+
+@font-face {
+    font-family: "Felix Titling";
+    src: url("../assets/fonts/FelixTitling.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}

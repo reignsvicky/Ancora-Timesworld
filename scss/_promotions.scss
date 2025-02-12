@@ -1,0 +1,105 @@
+@use "variables";
+
+.promotions {
+    .title {
+        h6 {
+            letter-spacing: .5rem;
+            font-size: .75rem;
+            font-weight: 400;
+        }
+        h2 {
+            letter-spacing: .3rem;
+        }
+    }
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+    position: relative;
+    flex: 0 0 calc(33.33% - 20px);
+    height: 26rem;
+    width: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.small-card {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.small-card h3 {
+    margin: 0;
+    font-size: 1rem;
+    z-index: 5;
+}
+
+.active .small-card {
+    bottom: -20px;
+}
+
+.active .small-card p,
+.active .small-card button {
+    display: block;
+}
+
+.card .small-card {
+    bottom: -20px;
+    height: auto;
+}
+
+// Navigation buttons
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 3;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.left {
+    left: -40px;
+}
+
+.right {
+    right: -40px;
+}

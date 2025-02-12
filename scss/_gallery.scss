@@ -1,0 +1,107 @@
+@use "variables";
+.gallery {
+    height: 100vh;
+    min-height: max-content;
+    .gallery-navbar {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+    
+            li {
+                position: relative;
+                min-width: max-content;
+                
+                a {
+                    text-decoration: none;
+                    font-size: 0.75rem;
+                    color: white;
+                    letter-spacing: 0.18rem;
+                    text-transform: uppercase;
+                    padding: 10px 15px;
+                    display: inline-block;
+                    white-space: nowrap;
+                    position: relative;
+                    transition: all 0.3s ease-in-out;
+    
+                    &.active {
+                        &:after {
+                            content: "";
+                            display: block;
+                            height: 2px;
+                            background-color: variables.$nav-active-green;
+                            width: 60%;
+                            border-radius: 5px;
+                            position: absolute;
+                            bottom: -5px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+    
+                    &:hover {
+                        color: variables.$nav-active-green;
+                    }
+                }
+            }
+        }
+    
+        @media (max-width: 992px) { 
+            ul {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    
+        @media (max-width: 768px) { 
+            ul {
+                flex-direction: column;
+            }
+    
+            li {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.gallery-menu-content {
+    position: relative;
+    z-index: 5;
+
+    .wave {
+        width: 9rem;
+        opacity: 0.5;
+    }
+
+    .wave-1,
+    .wave-2 {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .wave-1 {
+        right: -5%;
+        top: 20%;
+    }
+
+    .wave-2 {
+        left: -8%;
+        top: 50%;
+    }
+    .gallery-item {
+        display: none;
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    }
+}

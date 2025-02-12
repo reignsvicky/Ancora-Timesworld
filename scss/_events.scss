@@ -1,0 +1,64 @@
+@use "variables";
+
+.events {
+
+    .events-wrapper {
+        gap: 2rem;
+        
+        .event-card {
+            min-width: 30rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            .event-card-head {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .event-card-content {
+                background: white;
+                .event-type {
+                    font-size: .8rem;
+                    letter-spacing: .18rem;
+                    text-transform: uppercase;
+                }
+
+                .event-title {
+                    font-size: 1.4rem;
+                    text-transform: uppercase;
+                    letter-spacing: .18rem;
+
+                }
+
+                .event-description {
+                    font-size: 1rem;
+                    color: variables.$gray;
+                }
+            }
+
+            .event-card-footer {
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                .name {
+                    font-size: .7rem;
+                    text-transform: uppercase;
+                    letter-spacing: .15rem;
+                    color: white;
+                    max-width: 35ch;
+                }
+
+                .arrow-right {
+                    width: 3rem;
+                    cursor: pointer;
+
+                    img {
+                        width: 100%
+                    }
+                }
+            }
+        }
+    }
+
+}

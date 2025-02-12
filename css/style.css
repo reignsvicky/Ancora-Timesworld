@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Felix Titling";
+  src: url("../assets/fonts/FelixTitling.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.font-felix {
+  font-family: "Felix Titling", serif;
+}
+
+.font-lato {
+  font-family: "Lato", sans-serif;
+}
+
+.dark-button {
+  border-radius: 3px;
+  color: white;
+  font-family: "Lato", sans-serif;
+  background: #243230;
+}
+
+.light-background {
+  background: #fefef1;
+}
+
+.dark-background {
+  background: #243230;
+}
+
+.dark-text {
+  color: #243230;
+}
+
+.button-white {
+  color: white;
+}
+
+.footer .sec-1 .footer-logo {
+  width: 2rem;
+}
+.footer .sec-1 .logo-phrase {
+  color: #243230;
+}
+
+/*# sourceMappingURL=style.css.map */

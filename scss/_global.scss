@@ -1,0 +1,58 @@
+@use "variables";
+
+body {
+    font-family: variables.$font-secondary;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+a,li {
+    text-decoration: none;
+    list-style-type: none;
+
+}
+ul {
+    padding: 0;
+}
+p {
+    font-size: 1.1rem;
+}
+
+.font-felix {
+    font-family: variables.$font-primary;
+}
+
+.font-lato {
+    font-family: variables.$font-secondary;
+}
+
+.dark-button {
+    border-radius: 3px;
+    border: none;
+    color: white;
+    font-family: "Lato", sans-serif;
+    background: variables.$dark;
+    font-weight: 400;
+    font-size: 0.8rem;
+    padding: 1rem 3.3rem;
+    letter-spacing: .15rem;
+}
+
+.light-background {
+    background: variables.$light;
+}
+
+.dark-background {
+    background: variables.$dark;
+}
+
+.dark-color {
+    color: variables.$dark;
+}
+
+.sandal-white-color {
+    color: #F2F1E3;
+}
+
+.white-color {
+    color: white;
+}
