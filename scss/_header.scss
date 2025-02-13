@@ -118,10 +118,13 @@
             letter-spacing: .17rem;
         }
 
-        .primary-navbar a.active,
-        .primary-navbar a:hover {
+        .primary-navbar a.active {
             padding-bottom: 1rem;
             border-bottom: 2px solid variables.$nav-active-green;
+        }
+        .primary-navbar a:hover {
+            padding-bottom: 1rem;
+            color: variables.$nav-active-green;
         }
 
     }

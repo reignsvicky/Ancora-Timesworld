@@ -13,14 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
         delay: 1,
     });
 
-    gsap.from(".dark-button", {
-        y: 50, 
-        opacity: 0,
-        duration: 2,
-        ease: "power3.out",
-        delay: 0.5,
-    });
-
     gsap.from(".primary-navbar", {
         y: -50, 
         opacity: 0,
@@ -30,11 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     gsap.from(".vertical-dark-button", {
-        y: -330, 
+        y: -33, 
         opacity: 0,
         duration: 3,
         ease: "power3.out",
-        delay: 2,
+        
     });
 
 

@@ -24,3 +24,20 @@ function updateNavDots() {
     });
 }
 
+// Header active class settings
+document.addEventListener("DOMContentLoaded", function () {
+    function setActiveLink() {
+        const links = document.querySelectorAll("#nav a");
+        links.forEach(link => link.classList.remove("active"));
+
+        const currentHash = window.location.hash || "#";
+        const activeLink = document.querySelector(`#nav a[href="${currentHash}"]`);
+
+        if (activeLink) {
+            activeLink.classList.add("active");
+        }
+    }
+
+    setActiveLink();
+    window.addEventListener("hashchange", setActiveLink);
+});

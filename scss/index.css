@@ -46,6 +46,10 @@ main {
   font-size: 0.8rem;
   padding: 1rem 3.3rem;
   letter-spacing: 0.15rem;
+  transition: all 0.3s ease-in-out;
+}
+.dark-button:hover {
+  background: rgba(36, 50, 48, 0.7607843137);
 }
 
 .light-button {
@@ -59,6 +63,10 @@ main {
   font-size: 0.8rem;
   padding: 1rem 3.3rem;
   letter-spacing: 0.15rem;
+  transition: all 0.3s ease-in-out;
+}
+.light-button:hover {
+  background: rgba(255, 255, 255, 0.872) !important;
 }
 
 .vertical-dark-button {
@@ -80,6 +88,10 @@ main {
   top: 63%;
   border: 1px solid white;
   border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.vertical-dark-button:hover {
+  background: #243230;
 }
 
 .light-background {
@@ -207,10 +219,13 @@ main {
   transition: all 0.3s ease;
   letter-spacing: 0.17rem;
 }
-.header .carousel .primary-navbar a.active,
-.header .carousel .primary-navbar a:hover {
+.header .carousel .primary-navbar a.active {
   padding-bottom: 1rem;
   border-bottom: 2px solid #0EE3C4;
+}
+.header .carousel .primary-navbar a:hover {
+  padding-bottom: 1rem;
+  color: #0EE3C4;
 }
 
 /* Responsive Design */
