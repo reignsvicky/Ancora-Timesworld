@@ -194,6 +194,7 @@ main {
   margin: 0;
   justify-content: center;
   gap: 2rem;
+  background: transparent;
 }
 .header .carousel .primary-navbar li {
   position: relative;
@@ -231,6 +232,7 @@ main {
     justify-content: space-between;
     padding: 10px;
     border-bottom: none !important;
+    display: none !important;
   }
   .primary-navbar ul {
     display: none;
