@@ -1,105 +1,132 @@
 @use "variables";
 
 .promotions {
+    position: relative;
     .title {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         h6 {
             letter-spacing: .5rem;
             font-size: .75rem;
             font-weight: 400;
         }
+
         h2 {
             letter-spacing: .3rem;
+            max-width: 25ch;
+            width: 100%;
         }
+    }
+    .wave {
+        width: 3rem;
+        z-index: 5;
+        position: absolute;
+        img {
+            width: 8rem;
+        }
+    }
+    .wave-left {
+        left: 3%;
+        bottom: 15%;
+    }
+    .wave-right {
+        right: 8%;
+        top: 12%;    
     }
 }
 
-.slider-container {
+.slider-wrap {
     position: relative;
-    width: 100%;
-    max-width: 900px;
-    overflow: hidden;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.slider {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.5s ease-in-out;
-}
+    .slider-btn {
+        width: 5rem;
+        position: absolute;
+        cursor: pointer;
+        img {
+            width: 100%;
+        }
+    }
 
-.card {
-    position: relative;
-    flex: 0 0 calc(33.33% - 20px);
-    height: 26rem;
-    width: auto;
-    overflow: hidden;
-    border-radius: 10px;
-    border: none;
-    transition: transform 0.3s ease-in-out;
-}
+    .left {
+        left: 4%;
+        top: 32%;
+    }
 
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    .right {
+        right: 4%;
+        top: 32%;
+    }
 
-.small-card {
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-    z-index: 2;
-}
+    .slider-container {
+        display: flex;
+        justify-content: space-between;
+        overflow-x: scroll;
+        flex-direction: row;
+        transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        height: 70vh;
 
-.small-card h3 {
-    margin: 0;
-    font-size: 1rem;
-    z-index: 5;
-}
+        .slider {
+            position: relative;
+            min-width: 26.5rem;
+            scroll-snap-align: start;
+            overflow: hidden;
+            margin-right: 1em;
+            transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
+            padding: 0 1em;
+            cursor: pointer;
+            border-radius: 7px;
+            &:hover {
+                .info-card {
+                    .description, .dark-button {
+                        display: block;
+                        transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
+                    }
+                }
+            }
 
-.active .small-card {
-    bottom: -20px;
-}
+            img {
+                width: 100%;
+            }
 
-.active .small-card p,
-.active .small-card button {
-    display: block;
-}
+            .info-card {
+                position: absolute;
+                z-index: 5;
+                background-color: white;
+                bottom: 8%;
+                left: 13%;
+                width: 20rem;
+                border-radius: 10px;
+                transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
 
-.card .small-card {
-    bottom: -20px;
-    height: auto;
-}
+                .title {
+                    text-transform: uppercase;
+                    letter-spacing: .17rem;
+                    color: variables.$dark;
+                    transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
+                }
 
-// Navigation buttons
-.nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    z-index: 3;
-    font-size: 20px;
-    border-radius: 50%;
-}
+                .description {
+                    font-size: .85rem;
+                    letter-spacing: .15rem;
+                    color: variables.$gray;
+                    padding: 1rem 0;
+                    transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
+                    display: none;
+                }
 
-.left {
-    left: -40px;
-}
-
-.right {
-    right: -40px;
+                .dark-button {
+                    text-transform: uppercase;
+                    padding: 1rem 2rem;
+                    border-radius: 6px;
+                    transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
+                    display: none;
+                }
+            }
+        }
+    }
 }

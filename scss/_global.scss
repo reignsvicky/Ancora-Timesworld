@@ -39,6 +39,19 @@ main {
     letter-spacing: .15rem;
 }
 
+.light-button {
+    border-radius: 3px;
+    border: none;
+    background: white !important;
+    color: variables.$dark;
+    font-family: "Lato", sans-serif;
+    background: variables.$dark;
+    font-weight: 400;
+    font-size: 0.8rem;
+    padding: 1rem 3.3rem;
+    letter-spacing: .15rem;
+}
+
 .vertical-dark-button {
     border-radius: 3px;
     color: white;

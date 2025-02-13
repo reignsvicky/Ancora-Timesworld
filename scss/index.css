@@ -47,6 +47,19 @@ main {
   letter-spacing: 0.15rem;
 }
 
+.light-button {
+  border-radius: 3px;
+  border: none;
+  background: white !important;
+  color: #243230;
+  font-family: "Lato", sans-serif;
+  background: #243230;
+  font-weight: 400;
+  font-size: 0.8rem;
+  padding: 1rem 3.3rem;
+  letter-spacing: 0.15rem;
+}
+
 .vertical-dark-button {
   border-radius: 3px;
   color: white;
@@ -460,6 +473,16 @@ main {
   border-radius: 5px;
 }
 
+.promotions {
+  position: relative;
+}
+.promotions .title {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .promotions .title h6 {
   letter-spacing: 0.5rem;
   font-size: 0.75rem;
@@ -467,97 +490,103 @@ main {
 }
 .promotions .title h2 {
   letter-spacing: 0.3rem;
-}
-
-.slider-container {
-  position: relative;
+  max-width: 25ch;
   width: 100%;
-  max-width: 900px;
-  overflow: hidden;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-
-.slider {
-  display: flex;
-  gap: 20px;
-  transition: transform 0.5s ease-in-out;
-}
-
-.card {
-  position: relative;
-  flex: 0 0 calc(33.33% - 20px);
-  height: 26rem;
-  width: auto;
-  overflow: hidden;
-  border-radius: 10px;
-  border: none;
-  transition: transform 0.3s ease-in-out;
-}
-
-.card img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.small-card {
-  position: absolute;
-  bottom: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-  transition: all 0.3s ease-in-out;
-  z-index: 2;
-}
-
-.small-card h3 {
-  margin: 0;
-  font-size: 1rem;
+.promotions .wave {
+  width: 3rem;
   z-index: 5;
-}
-
-.active .small-card {
-  bottom: -20px;
-}
-
-.active .small-card p,
-.active .small-card button {
-  display: block;
-}
-
-.card .small-card {
-  bottom: -20px;
-  height: auto;
-}
-
-.nav-button {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 15px;
+}
+.promotions .wave img {
+  width: 8rem;
+}
+.promotions .wave-left {
+  left: 3%;
+  bottom: 15%;
+}
+.promotions .wave-right {
+  right: 8%;
+  top: 12%;
+}
+
+.slider-wrap {
+  position: relative;
+}
+.slider-wrap .slider-btn {
+  width: 5rem;
+  position: absolute;
   cursor: pointer;
-  z-index: 3;
-  font-size: 20px;
-  border-radius: 50%;
 }
-
-.left {
-  left: -40px;
+.slider-wrap .slider-btn img {
+  width: 100%;
 }
-
-.right {
-  right: -40px;
+.slider-wrap .left {
+  left: 4%;
+  top: 32%;
+}
+.slider-wrap .right {
+  right: 4%;
+  top: 32%;
+}
+.slider-wrap .slider-container {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  flex-direction: row;
+  transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  height: 70vh;
+}
+.slider-wrap .slider-container .slider {
+  position: relative;
+  min-width: 26.5rem;
+  scroll-snap-align: start;
+  overflow: hidden;
+  margin-right: 1em;
+  transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
+  padding: 0 1em;
+  cursor: pointer;
+  border-radius: 7px;
+}
+.slider-wrap .slider-container .slider:hover .info-card .description, .slider-wrap .slider-container .slider:hover .info-card .dark-button {
+  display: block;
+  transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
+}
+.slider-wrap .slider-container .slider img {
+  width: 100%;
+}
+.slider-wrap .slider-container .slider .info-card {
+  position: absolute;
+  z-index: 5;
+  background-color: white;
+  bottom: 8%;
+  left: 13%;
+  width: 20rem;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
+}
+.slider-wrap .slider-container .slider .info-card .title {
+  text-transform: uppercase;
+  letter-spacing: 0.17rem;
+  color: #243230;
+  transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
+}
+.slider-wrap .slider-container .slider .info-card .description {
+  font-size: 0.85rem;
+  letter-spacing: 0.15rem;
+  color: #636363;
+  padding: 1rem 0;
+  transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
+  display: none;
+}
+.slider-wrap .slider-container .slider .info-card .dark-button {
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
+  display: none;
 }
 
 .footer .footer-logo {
