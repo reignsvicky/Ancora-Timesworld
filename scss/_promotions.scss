@@ -68,7 +68,8 @@
         transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
-        height: 70vh;
+        height: 63vh;
+        overflow: hidden;
 
         .slider {
             position: relative;
@@ -82,10 +83,9 @@
             border-radius: 7px;
             &:hover {
                 .info-card {
-                    .description, .dark-button {
-                        display: block;
-                        transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
-                    }
+                    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                    bottom: 3%;
+
                 }
             }
 
@@ -97,7 +97,7 @@
                 position: absolute;
                 z-index: 5;
                 background-color: white;
-                bottom: 8%;
+                bottom: -34%;
                 left: 13%;
                 width: 20rem;
                 border-radius: 10px;
@@ -116,7 +116,6 @@
                     color: variables.$gray;
                     padding: 1rem 0;
                     transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
-                    display: none;
                 }
 
                 .dark-button {
@@ -124,7 +123,6 @@
                     padding: 1rem 2rem;
                     border-radius: 6px;
                     transition: all 0.5s cubic-bezier(0.45, 0.66, 0.66, 0.99);
-                    display: none;
                 }
             }
         }
