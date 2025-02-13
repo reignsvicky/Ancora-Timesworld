@@ -4,7 +4,7 @@
 
     .events-wrapper {
         gap: 2rem;
-        
+        overflow: hidden;
         .event-card {
             min-width: 30rem;
             border-radius: 5px;

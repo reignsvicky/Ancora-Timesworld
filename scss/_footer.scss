@@ -58,10 +58,12 @@
             text-align: center;
         }
         
-        .footer-left, .footer-right {
+        .footer-left, .footer-right, .location, .get-taste {
             text-align: center;
             display: block;
+            max-width: 100%;
         }
+       
         .signup-wrapper {
             justify-content: center;
         }

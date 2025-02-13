@@ -8,6 +8,7 @@ body {
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: rgba(20, 20, 20, 0.88);
 }
 
 a, li {
@@ -74,7 +75,7 @@ main {
   -webkit-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
   position: fixed;
-  z-index: 5;
+  z-index: 10;
   right: -95px;
   top: 63%;
   border: 1px solid white;
@@ -331,6 +332,7 @@ main {
 }
 .events .events-wrapper {
   gap: 2rem;
+  overflow: hidden;
 }
 .events .events-wrapper .event-card {
   min-width: 30rem;
@@ -639,9 +641,10 @@ main {
     width: 100%;
     text-align: center;
   }
-  .footer .footer-left, .footer .footer-right {
+  .footer .footer-left, .footer .footer-right, .footer .location, .footer .get-taste {
     text-align: center;
     display: block;
+    max-width: 100%;
   }
   .footer .signup-wrapper {
     justify-content: center;
